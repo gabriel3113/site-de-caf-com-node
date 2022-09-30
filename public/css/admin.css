@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #323232;
+    border: none;
+
+}
+
+body {
+    background-image: url("../Imagens/bogdan-mb0sco-jazzhopcafef-exampleanim.gif");
+    background-attachment: fixed;
+    background-position: center; 
+}
+textarea:focus,input:focus{
+    outline: none;
+}
+
+a{
+    font-size: .8rem;
+    text-decoration: none;
+}
+a:hover{
+    color: #765898;
+}
+
+#login{
+    background-color: #111111;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+    margin-top: 20vh;
+    border-radius: 10px;
+    text-align: center;
+}
+
+form{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+label,input{
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+#login-click{
+
+    display: none;
+}
+li{
+    cursor: pointer;
+}
+label{
+    font-weight: bold;
+    font-size: .8rem;
+    color: white;
+    margin-bottom: 6px;
+}
+input{
+    border-bottom: 2px solid #e6770b;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    background-color: #323232;
+    color: #fffcb8;
+}
+::placeholder{
+    color: white;
+}
+
+button{
+    border-bottom: 2px solid #e6770b;
+    width: 130px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    background-color: #323232;
+    color: #fffcb8;
+}
+
+div[id="login"] h1{
+    font-size: 35px;
+    color: #ffffff;
+    word-spacing: 1px;
+}
+
+div[id="login"] button:hover{
+    border-bottom: 2px solid #974405;
+     background-color: #e6770b ;
+     transition: 0.5s;
+     transform: translateY(-10px);
+}
+input:focus{
+    border-bottom: 2px solid #765898;
+
+}
+input[type="Submit"]{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 30px;
+    background-color: #191919;
+    cursor: pointer;   
+}
+
+.social, .social p{
+    margin-bottom: 20px;
+}
+ i{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    color: white;
+    margin: 0 5px;
+    cursor: pointer;
+ 
+}
+
+#redes{
+    color: #d3290f;
+    margin-bottom: 15px;
+}
+#registrar, p{
+    margin-bottom: 10px;
+    color: #d3290f;
+}
+footer {
+    position: relative;
+    width: 100%;
+    background-color: var(--black);
+    min-height: 100PX;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.social-footer,
+.menu-footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0px;
+
+}
+.social-footer li,
+.menu-footer li
+{
+    list-style: none;
+}
+
+.social-footer li a {
+    font-size: 2em;
+    color: var(--white);
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.social-footer li a:hover{
+
+    transform: translateY(-10px);
+
+   
+}
+
+.menu-footer li a{
+    font-size: 1.2em;
+    color: var(--white);
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    
+    font-weight:bolder;
+    opacity: 1;
+
+}
+.menu-footer li a:hover{
+    transform: translateY(-10px);
+  
+}
+
+footer p{
+
+    color: var(--white);
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+.wave{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(255, 0, 251, 0.148) ;
+    
+
+}
+
+#imagem1,#imagem2,#imagem3,#imagem4{
+    margin: 20px auto;
+}
+
+#p1{
+    margin-left: 40px;
+}
+/* =============================== FOOTER =============================== */
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffe in Jazz - Cardápio</title>
+    <script src="https://kit.fontawesome.com/7936146879.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/cardapio.css">
+
+</head>
+<body>
+    <div class="background">
+        <nav>
+            <a onclick="window.location.href='./index'"><h2>Coffee in <span>Jazz</span></h2></a>
+            <ul class="cabeçalho-link">
+                <li><a onclick="window.location.href='./index'">Inicio</a></li>
+                <li><a onclick="window.location.href='./servicos'">Serviços</a></li>
+                <li><a onclick="window.location.href='./cardapio'">Cardápio</a></li>
+                <li ><a onclick="window.location.href='./admin'"><%= message %></a></li>
+                <li ><a onclick="window.location.href='./controle'"><%= messagetwo %></a></li>
+            </ul>
+        </nav>
+
+        </div>
+        <div class="bg"></div>
+        <div class="main">
+            <h2>Cardápio</h2>
+        </div>
+    </div>
+    <section class="content">
+        <ul class="filter">
+            <li class="item active" data-filter="todos">Todos</li>
+            <li class="item" data-filter="aperitivos">Aperitivos</li>
+            <li class="item" data-filter="bebidas">Bebidas</li>
+            <li class="item" data-filter="sobremesas">Sobremesas</li>   
+        </ul>
+    </section>
+    <div class="cardapio">
+        
+        <ul class="itens">
+            <div class="flex-prod">
+            <li class="item aperitivos"><a class="item aperitivos" href="https://chat.whatsapp.com/KHV3duyR3Z6Lu8CGKjoZXC"><div class="border-product"><img src="./Imagens/cebola.jpg" width="180px" height="180px" id="product"><br><label>Cebola<span>RS$15,00</span></label></div></a>
+            <li class="item aperitivos"><a class="item aperitivos" href="https://chat.whatsapp.com/KHV3duyR3Z6Lu8CGKjoZXC"><div class="border-product"><img src="./imagens/azeitona.jpg" width="180px" height="180px" id="product"><br><label>Azeitona<span>R$8,00</span></label></div></a>
+            <li class="item aperitivos"> <a class="item aperitivos" href="https://chat.whatsapp.com/KHV3duyR3Z6Lu8CGKjoZXC"><div class="border-product"><img src="./Imagens/espetinho.jpg" width="180px" height="180px" id="product"><br><label>Espetinho<span>R$ 5,50</span></label></div></a>
+            <li class="item sobremesas"><a class="item sobremesas" href="https://chat.whatsapp.com/KHV3duyR3Z6Lu8CGKjoZXC"><div class="border-product"><img src="./Imagens/Cheesecake.jpg" width="180px" height="180px" id="product"><br><label>Cheesecake <span>R$ 7,00</span></label></div></a>    
+            </div>
+            <div class="flex-prod">
+            <li class="item bebidas"><a class="item bebidas" href="https://chat.whatsapp.com/KHV3duyR3Z6Lu8CGKjoZXC"><div class="border-product"><img src="./Imagens/cappuccino.jpg" width="180px" height="180px" id="product"><br><label>Cappuccino<span>R$ 8,00</span></label></div></a>
+            <li class="item bebidas"> <a class="item bebidas" href="https://chat.whatsapp.com/KHV3duyR3Z6Lu8CGKjoZXC"><div class="border-product"><img src="./Imagens/cafe.jpg" width="180px" height="180px" id="product"><br><label>Café<span>R$5,00</span></label></div></a>
+            <li class="item sobremesas"><a class="item sobremesas" href="https://chat.whatsapp.com/KHV3duyR3Z6Lu8CGKjoZXC"><div class="border-product"><img src="./Imagens/cookie.jpg" width="180px" height="180px" id="product"><br><label>Cookie<span>R$ 5,00</span></label></div></a>
+            <li class="item sobremesas"><a class="item sobremesas" href="https://chat.whatsapp.com/KHV3duyR3Z6Lu8CGKjoZXC"><div class="border-product"><img src="./Imagens/bolo.png" width="180px" height="180px" id="product"><br><label>Bolo<span>R$ 4,00</span></label></div></a>
+            </div>
+            <div class="flex-prod">
+            <li class="item bebidas"><a class="item bebidas" href="https://chat.whatsapp.com/KHV3duyR3Z6Lu8CGKjoZXC"><div class="border-product"><img src="./Imagens/conhaque.jpg" width="180px" height="180px" id="product"><br><label>Conhaqu <span>R$7,00</span></label></div></a>
+            <li class="item bebidas"><a class="item bebidas" href="https://chat.whatsapp.com/KHV3duyR3Z6Lu8CGKjoZXC"><div class="border-product"><img src="./Imagens/gin.jpg" width="180px" height="180px" id="product"><br><label>Gin <span>R$7,00</span></label></div></a>
+            <li class="item bebidas"><a class="item bebidas" href="https://chat.whatsapp.com/KHV3duyR3Z6Lu8CGKjoZXC"><div class="border-product"><img src="./Imagens/rum.jpg" width="180px" height="180px" id="product"><br><label>Rum <span>R$7,00</span></label></div></a>
+            <li class="item bebidas"><a class="item bebidas" href="https://chat.whatsapp.com/KHV3duyR3Z6Lu8CGKjoZXC"><div class="border-product"><img src="./Imagens/chop.png" width="180px" height="180px" id="product"><br><label>Chop <span>R$7,00</span></label></div></a>
+            </div>
+            <div class="flex-prod">
+            <li class="item aperitivos"><a class="item aperitivos" href="https://chat.whatsapp.com/KHV3duyR3Z6Lu8CGKjoZXC"><div class="border-product"><img src="./Imagens/pao-de-alho.jpg" width="180px" height="180px" id="product"><br><label>Pão de alho <span>R$7,00</span></label></div></a>
+            <li class="item sobremesas"><a class="item sobremesas" href="https://chat.whatsapp.com/KHV3duyR3Z6Lu8CGKjoZXC"><div class="border-product"><img src="./Imagens/pudim.jpg" width="180px" height="180px" id="product"><br><label>Pudim <span>R$7,00</span></label></div></a>
+            <li class="item aperitivos"><a class="item aperitivos" href="https://chat.whatsapp.com/KHV3duyR3Z6Lu8CGKjoZXC"><div class="border-product"><img src="./Imagens/palmito.jpg" width="180px" height="180px" id="product"><br><label>Palmito <span>R$7,00</span></label></div></a>
+            <li class="item "><a class="item aperitivos" href="https://chat.whatsapp.com/KHV3duyR3Z6Lu8CGKjoZXC"><div class="border-product"><img src="./Imagens/vinho.jpg" width="180px" height="180px" id="product"><br><label>Vinho <span>R$7,00</span></label></div></a>    
+            </div>
+            
+        </ul>
+    </div>
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+
+        <ul class="social-footer">
+            <li><a href="#">
+                    <i class="fab fa-facebook-square"></i>
+                </a></li>
+            <li><a href="#">
+                    <i class="fab fa-instagram-square"></i>
+                </a></li>
+            <li><a href="#">
+                    <i class="fab fa-twitter-square"></i>
+                </a></li>
+            <li><a href="#">
+                    <i class="fab fa-whatsapp-square"></i>
+                </a></li>
+        </ul>
+
+         <ul class="menu-footer">
+            <li>
+                <a onclick="window.location.href='./index'"> Home</a>
+            </li>
+
+            <li>
+                <a onclick="window.location.href='./servicos'"> Serviços</a>
+            </li>
+
+            <li>
+                <a onclick="window.location.href='./cardapio'"> Cardàpio</a>
+            </li>
+        </ul>
+        <p> © Copyright - Todos os direitos reservados </p>
+        </div> 
+    </footer>
+
+</body>
+<script  type="javascript.js" src="/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+    $(document).ready(function() {
+    $(".filter .item").click(function(){
+        $(this).addClass("active").siblings().removeClass("active")
+
+        $(".itens").fadeOut()
+        setTimeout(function(){
+            $(".itens").fadeIn()
+        }, 700)
+
+        let value = $(this).attr("data-filter")
+
+        setTimeout(function(){
+            if(value === "todos"){
+                $(".itens .item").show("500")
+        }   else{
+                $(".itens .item").not("." + value).hide("500")
+                $(".itens .item").filter("." + value).show("500")
+            }
+        }, 350)
+    })
+})
+</script>
+</html>

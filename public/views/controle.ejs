@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffe in Jazz - Controle de estoque</title>
+    <link rel="stylesheet" href="../css/controle.css">
+    <script src="https://kit.fontawesome.com/7936146879.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="background">
+        <nav>
+            <a onclick="window.location.href='./index'"><h2>Coffee in <span>Jazz</span></h2></a>
+            <ul class="cabeçalho-link">
+                <li><a onclick="window.location.href='../index'">Inicio</a></li>
+                <li><a onclick="window.location.href='./servicos'">Serviços</a></li>
+                <li><a onclick="window.location.href='./cardapio'">Cardápio</a></li>
+                <li ><a onclick="window.location.href='./admin'"><%= message %></a></li>
+                <li ><a onclick="window.location.href='./controle'"><%= messagetwo %></a></li>
+            </ul>
+            </ul>
+        </nav>
+        </div>
+        <div class="controle">
+            <h2>Cadastro de produtos</h2>
+            <div class="control-input">
+                <input id="name" type="text" placeholder="Nome">
+                <input id="qtd" type="number" placeholder="Quantidade">
+                <input id="preco" type="text" placeholder="Preço">
+            </div>
+            <div class="control-button">
+                <button id="register">Cadastrar</button>
+                <button id="edit">Editar</button>
+                <button id="remove">Excluir</button>
+            </div>
+            <div class="table" id="tabela2">
+                <table id="tabela1" border="1" width="50%" height="5%">
+                    
+                    
+                    <tr>
+                        <td width="30px">
+                        </td>
+                        <td>
+                            <label>Nome:</label>  
+                        </td>
+                        <td>
+                            <label>Qtd:</label> 
+                        </td>
+                        <td>
+                            <label>Preço:</label> 
+                        </td>
+                    </tr>
+                    <!-- <tr><td width="30px"><input type="checkbox">
+                    </td><td></td><td></td><td></td></tr> -->
+                    
+                </table>
+            </div>
+            <div id="sometest"></div>
+    </div>
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+
+        <ul class="social-footer">
+            <li><a href="#">
+                    <i class="fab fa-facebook-square"></i>
+                </a></li>
+            <li><a href="#">
+                    <i class="fab fa-instagram-square"></i>
+                </a></li>
+            <li><a href="#">
+                    <i class="fab fa-twitter-square"></i>
+                </a></li>
+            <li><a href="#">
+                    <i class="fab fa-whatsapp-square"></i>
+                </a></li>
+        </ul>
+
+         <ul class="menu-footer">
+            <li>
+                <a onclick="window.location.href='./index'"> Home</a>
+            </li>
+
+            <li>
+                <a onclick="window.location.href='./servicos'"> Serviços</a>
+            </li>
+
+            <li>
+                <a onclick="window.location.href='./cardapio'"> Cardapio</a>
+            </li>
+
+            <li>
+                <a onclick="window.location.href='./controle'"> Controle</a>
+            </li>
+        </ul>
+        <p> © Copyright - Todos os direitos reservados </p>
+        </div> 
+    </footer>
+
+    <script>
+        var globalNames = [];
+var register = document.querySelector("#register");
+var edit = document.querySelector("#edit");
+var remove = document.querySelector("#remove");
+var nome = document.querySelector("#name");
+var qtd = document.querySelector("#qtd");
+var preco =  document.querySelector("#preco");
+var tabela = document.querySelector("#tabela1");
+
+
+
+
+
+    
+
+    // register.addEventListener("click", registerProduct)
+
+
+
+// function registerProduct(){
+
+
+register.onclick = function() {
+
+    var itens=new Object();
+
+
+    itens.nome = nome.value;
+    itens.qtd = qtd.value;
+    itens.preco = preco.value;
+    itens.id=globalNames.length;
+    globalNames.push(itens)
+
+
+tabela.innerHTML +=`<tr><td><input type="checkbox" id="${itens.id}" onchange="verificar(this.id)"></td></td><td>${itens.nome}</td><td>${itens.qtd}</td><td>${itens.preco}</td></>`;
+
+}
+
+remove.onclick = function() {
+
+    for (let i = 0; i < globalNames.length; i++) {
+        var elemento = document.querySelectorAll('.table table tr td input')[i];
+        if (elemento.checked) {
+            globalNames.splice(elemento.id, 1);
+            tabela.innerHTML = `<tr><td width="30px"></td><td>Nome</td><td>Quant.</td><td>Preço</td></tr>`;
+            mostrarTabela();
+
+        }
+    }
+
+}
+
+function verificar(id){
+    
+    let cont = 0;
+    for (let i = 0; i < globalNames.length; i++){
+        
+        let elemento = document.querySelectorAll('.table table tr td input ')[i];
+        if (elemento.checked){
+            cont++;
+            if (cont > 1){
+                document.getElementById("sometest").innerHTML='Não é possível selecionar mais de 1 elemento.';
+                elemento.checked = false;
+                break;
+            }
+        }
+    }
+}
+
+edit.onclick = function(){
+
+    for (let i = 0; i < globalNames.length; i++){
+        let elemento = document.querySelectorAll('.table table tr td input')[i];
+        if (elemento.checked){
+            globalNames[i].nome = nome.value;
+            globalNames[i].qtd = qtd.value;
+            globalNames[i].preco = preco.value;
+
+    
+
+            tabela.innerHTML = `<tr><td width="30px"></td><td>Nome</td><td>Quant.</td><td>Preço</td></tr>`;
+            mostrarTabela();
+        }
+    } 
+
+
+}
+
+
+
+function mostrarTabela(){
+    for (let i = 0; i < globalNames.length; i++){
+        tabela.innerHTML += `<tr><td width="30px"><input type="checkbox" id="${i}" onchange="verificar()"></td><td>${globalNames[i].nome}</td><td>${globalNames[i].qtd}</td><td>${globalNames[i].preco}</td></tr>`;
+    }
+}
+    </script>
+</body>
+</html>

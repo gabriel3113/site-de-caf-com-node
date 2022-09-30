@@ -1,0 +1,401 @@
+body{
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #1f1240;
+}
+  
+.bg{
+    background-image: url(../Imagens/cyberpunk-city-gif-gif-abyss.gif) ;
+    background-position: center;
+    background-attachment: fixed;
+    width: 109%;
+    height: 109%;
+    -webkit-filter-: blur(3px);
+    position:absolute;
+}
+#login-click{
+
+    display: none;
+}
+li{
+    cursor: pointer;
+}
+
+.control-set{
+    display: none;
+}
+
+#sexo{
+    margin-top: 30px;
+    animation: flutuacao 10s
+    ease-in-out infinite;
+    background-color: #64636242;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 10px 40px  #111111;
+ 
+}
+@keyframes flutuacao {
+    0%,100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-65px);
+    }
+    
+}
+
+
+
+body * {
+    box-sizing: border-box;
+}
+
+.main-cad{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.left-card{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.left-card > h1{
+    font-size: 3vw;
+    color: #ffffff;
+    text-align: center;
+  
+
+}
+
+.left-image{
+    width: 5vw;
+}
+
+.rigth-card{
+
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+#form{
+    width: 55vh;
+}
+
+.card-login{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 25px ;
+    background: #111111;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #24277b;
+}
+
+
+.card-login > h1{
+
+    color: #e9b407;
+    font-weight: 800;
+    margin: 0;
+}
+
+.form-control{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px;
+}
+
+.form-control > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px ;
+    background: #323232;
+    color: #ffffff;
+    font-size: 10pt;
+    box-shadow: #00000056;
+    outline: none;
+    box-sizing: border-box;
+
+}
+
+.form-control i {
+
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    visibility: hidden;
+    
+}
+.form-control small{
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+
+
+}
+
+.register-input :hover{
+
+    background-color: #e6770b;
+    color: black;
+}
+
+.form-control > label{
+    color: #f0ffffde;
+    margin-bottom: 10px 0px;
+}
+
+
+.form-control > input::placeholder{
+   color: #f0ffff94;
+}
+.form-control input:focus{
+    transition: 0.5s;
+    font-size: 1.1rem;
+    transform: translateX(10px);
+    font-weight: bold;
+}
+.form-control input::placeholder{
+    /* color:rgb(0, 0, 0); */
+    padding-left: 3px;
+    font-weight: bold;
+    
+}
+
+.fa-rocket{
+    font-size: 200px;
+    float: right;
+    margin-right: 20%;
+    margin-top: 150px;
+}
+
+.btn-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #ffffff;
+    background: #e6770b;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #BD6009;
+}
+.form-control.success input{
+    
+    border-color: green;
+}
+
+.form-control.error input{
+    
+    border-color: red;
+}
+
+.form-control.form-control.success i.fa-check-circle{
+
+    color: green;
+    visibility: visible;
+}
+
+.form-control.form-control.error i.fa-exclamation-circle{
+
+    color: red;
+    visibility: visible;
+}
+
+.form-control.error small{
+    visibility: visible;
+    color: red;
+}
+#msgError{
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+    
+
+}
+#msgError-login{
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+    
+
+}
+
+#msgSucess{
+    text-align: center;
+    color: #00bb00;
+    background-color: #bbffbe;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+    
+
+}
+footer {
+    position: relative;
+    width: 100%;
+    background-color:#111111;
+    min-height: 100PX;
+    padding: 18px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.social-footer,
+.menu-footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0px;
+
+}
+
+.social-footer{
+    padding-right: 40px;
+}
+
+.menu-footer{
+    padding-left: 46px;
+}
+
+.social-footer li,
+.menu-footer li
+{
+    list-style: none;
+}
+
+.social-footer li a {
+    font-size: 2em;
+    color: #e6770b;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.social-footer li a:hover{
+
+    transform: translateY(-10px);
+
+   
+}
+
+.menu-footer li a{
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    font-weight:bolder;
+    opacity: 1;
+
+}
+.menu-footer li a:hover{
+    transform: translateY(-10px);
+  
+}
+
+footer p{
+    color: #717171;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 0.6875rem;
+    font-weight: 300;
+    line-height: 1.35;
+}
+.wave{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #111111 ;
+    
+
+}
+
+#imagem1,#imagem2,#imagem3,#imagem4{
+    margin: 20px auto;
+}
+
+#p1{
+    margin-left: 40px;
+}
+/* =============================== FOOTER =============================== */
+
+
+
+
+@media only screen and (max-with:600px){
+    .main-cad{
+        flex-direction: column;
+    }
+
+    .left-card > h1{
+        display: none;
+    }
+
+    .left-card{
+        width: 100px;
+        height: auto;
+    }
+
+    .rigth-card{
+        width: 100px;
+        height: auto;
+    }
+
+    .left-card-image{
+        width: 50vw;
+    }
+
+
+}
+
+
+.dnone{
+    display: none;
+}
